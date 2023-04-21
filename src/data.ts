@@ -1,3 +1,5 @@
+import { randomUUID } from 'crypto';
+
 export enum ReportType {
   INCOME = 'income',
   EXPENSE = 'expense',
@@ -17,25 +19,25 @@ interface Data {
 export const data: Data = {
   report: [
     {
-      id: 'uuid1',
+      id: randomUUID(),
       source: 'salary',
-      amount: 7500,
+      amount: 5500,
       created_at: new Date(),
       updated_at: new Date(),
       type: ReportType.INCOME,
     },
     {
-      id: 'uuid2',
+      id: randomUUID(),
       source: 'salary',
-      amount: 7500,
+      amount: 1500,
       created_at: new Date(),
       updated_at: new Date(),
       type: ReportType.INCOME,
     },
     {
-      id: 'uuid3',
+      id: randomUUID(),
       source: 'salary',
-      amount: 7500,
+      amount: 6500,
       created_at: new Date(),
       updated_at: new Date(),
       type: ReportType.EXPENSE,
